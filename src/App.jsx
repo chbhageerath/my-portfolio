@@ -5,6 +5,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Resume from "./components/Resume";
+import Portfolio from "./components/Portfolio";
+import Certificates from "./components/Certificates";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
@@ -15,6 +18,9 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/certificates" element={<Certificates />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
