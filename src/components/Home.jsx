@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./App.css";
 import myPhoto from "../assets/react.svg";
 
 export default function Home() {
   const homeRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (window.VANTA) {
@@ -36,11 +38,11 @@ export default function Home() {
           frontend technologies.
         </p>
         <button
-          className="resume-btn"
-          onClick={() => (window.location.href = "/resume")}
-        >
-          View Resume
-        </button>
+      className="resume-btn"
+      onClick={() => navigate("/resume")}
+    >
+      View Resume
+    </button>
       </div>
       <div className="image">
         <img src={myPhoto} alt="Profile" />
