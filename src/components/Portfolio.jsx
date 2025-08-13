@@ -10,7 +10,7 @@ const projects = [
   
 ];
 
-const categories = ["All", "AI", "DV", "WA", "CSE"];
+const categories = ["All", "AI", "CSE"];
 
 function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All");

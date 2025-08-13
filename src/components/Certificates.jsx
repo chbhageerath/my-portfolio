@@ -1,6 +1,6 @@
 import React from "react";
 import "./Certificates.css";
-import Dsa from "../assets/dsa.png";
+import Dsa from "../assets/Dsa.png";
 import python from "../assets/python.png";
 import css from "../assets/css.png";
 import deloitte from "../assets/deloitte.png";
