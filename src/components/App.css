@@ -1,0 +1,107 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.nav-links {
+  font-family: 'Times New Roman', Times, serif;
+  list-style: none;
+  display: flex;
+  gap: 20px; 
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+#span{
+  font-size: 20px;
+  opacity: 0.9;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+h1{
+  font-size: 2.5rem;
+  opacity: 0.7;
+}
+h2{
+  color:black;
+  font-weight: bold;
+}
+hr{
+  font-weight: bold;
+}
+p{
+  opacity: 0.7;
+}
+.nav-links li a{
+  cursor: pointer;
+  color: #6ba4e1;
+  text-decoration: none;
+  padding:15px;
+}
+.nav-links li a:hover{
+  text-decoration: underline;
+  color:aqua;
+  transition-duration: 0.7s;
+  transform-origin:left;
+}
+.navbar {
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  justify-content: space-between;
+  background-color: #1e56a0;
+  padding: 15px 30px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.home {
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 40px;
+    overflow: hidden;
+    height: 100vh;
+    color: #f1f5f9;
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-text {
+  position:relative;
+  max-width: 50%;
+  z-index: 1;
+  color:#f2f3f5;
+}
+
+.highlight {
+  color: #1ec7ff;
+}
+
+.resume-btn {
+  background-color: #1e90ff;
+  color: rgb(6, 6, 6);
+  border: none;
+  padding: 15px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.resume-btn:hover {
+  background-color: #1ec7ff;
+  color:white;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+.image img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
