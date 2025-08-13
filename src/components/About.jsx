@@ -1,5 +1,5 @@
 import React from "react";
-import "./about.css";
+import "./About.css";
 import react from "../assets/react.svg";
 import {
   FaBirthdayCake,
