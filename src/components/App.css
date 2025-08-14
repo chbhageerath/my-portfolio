@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  opacity: 1;
 }
 .nav-links {
   font-family: 'Times New Roman', Times, serif;
@@ -25,7 +26,7 @@ h1{
   opacity: 0.7;
 }
 h2{
-  color:black;
+  color:rgb(96, 226, 224);
   font-weight: bold;
 }
 hr{
@@ -54,6 +55,7 @@ p{
   padding: 15px 30px;
   color: white;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .home {
@@ -66,7 +68,9 @@ p{
     padding: 40px 40px;
     overflow: hidden;
     height: 100vh;
+    width: 100%;
     color: #f1f5f9;
+    opacity: 1;
     font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
 

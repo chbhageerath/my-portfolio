@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect, useRef  } from 'react';
 import "./Portfolio.css";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.jpeg";
@@ -13,6 +13,24 @@ const projects = [
 const categories = ["All", "AI", "CSE"];
 
 function Portfolio() {
+  const homeRef = useRef(null);
+      useEffect(() => {
+        if (window.VANTA) {
+          const effect = window.VANTA.NET({
+            el: homeRef.current,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+          });
+          return () => {
+            if (effect.destroy) effect.destroy();
+          };
+        }
+      }, []);
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
@@ -21,6 +39,7 @@ function Portfolio() {
       : projects.filter((project) => project.category === activeCategory);
 
   return (
+    <body ref={homeRef}>
     <div className="portfolio-page">
       <h2 className="portfolio-heading">My Portfolio</h2>
       <p className="portfolio-subheading">
@@ -52,6 +71,7 @@ function Portfolio() {
         ))}
       </div>
     </div>
+    </body>
   );
 }
 

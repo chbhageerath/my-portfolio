@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useState,useEffect, useRef  } from "react";
 import "./Contact.css";
-import Footer from "../components/Footer.jsx";
+
 
 
 
 function Contact() {
+  const homeRef = useRef(null);
+        useEffect(() => {
+          if (window.VANTA) {
+            const effect = window.VANTA.NET({
+              el: homeRef.current,
+              mouseControls: true,
+              touchControls: true,
+              gyroControls: false,
+              minHeight: 200.0,
+              minWidth: 200.0,
+              scale: 1.0,
+              scaleMobile: 1.0,
+            });
+            return () => {
+              if (effect.destroy) effect.destroy();
+            };
+          }
+        }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,8 +43,9 @@ function Contact() {
   };
 
   return (
+    <body ref={homeRef}>
     <div className="contact-page">
-      <h2 className="contact-title">Get in Touch</h2>
+      <h2 className="contact-title">Contact Me</h2>
       <p className="contact-subtext">
         Have a question or want to work together? Send me a message or visit us!
       </p>
@@ -92,8 +111,9 @@ function Contact() {
           ></iframe>
         </div>
       </div>
-      <Footer></Footer>
+      
     </div>
+    </body>
   );
 }
 

@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Resume.css";
 
 export default function Resume() {
+  const homeRef = useRef(null);
+      useEffect(() => {
+        if (window.VANTA) {
+          const effect = window.VANTA.NET({
+            el: homeRef.current,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+          });
+          return () => {
+            if (effect.destroy) effect.destroy();
+          };
+        }
+      }, []);
   return (
+    <body ref={homeRef}>
     <div className="resume">
       <h1 className="name">CHIKURTHI BHAGEERATH</h1>
       <p className="location">Sadasivpet, Telangana</p>
@@ -104,19 +123,17 @@ export default function Resume() {
       <section>
         <h2>Extracurricular Activities</h2>
         <ul>
-          <li>
-            🏫 <b>Class Representative:</b> Bridged communication between
-            students and faculty, organized academic discussions.
-          </li>
+          <li>🖼️ <b>Artist:</b> Drawing, Painting</li>
           <li>
             🎯 <b>Placement Cell Student Coordinator:</b> Managed placement
             drives, handled communication.
           </li>
-          <li>🎧 <b>Listening Songs:</b> Telugu, English</li>
+          <li>🎧 <b>Listening Songs:</b> Telugu, English and Hindi</li>
           <li>📚 <b>Reading Books:</b> Stories and Studies</li>
-          <li>🍳 <b>Cooking:</b> Veg</li>
+          
         </ul>
       </section>
     </div>
+    </body>
   );
 }

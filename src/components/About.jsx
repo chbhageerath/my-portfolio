@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./About.css";
 import react from "../assets/react.svg";
 import {
@@ -12,7 +12,26 @@ import {
 } from "react-icons/fa";
 
 const About = () => {
+  const homeRef = useRef(null);
+  useEffect(() => {
+    if (window.VANTA) {
+      const effect = window.VANTA.NET({
+        el: homeRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+      });
+      return () => {
+        if (effect.destroy) effect.destroy();
+      };
+    }
+  }, []);
   return (
+    <body ref={homeRef}>
     <section className="about-section">
       <h2>About</h2>
       <p>
@@ -53,6 +72,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </body>
   );
 };
 

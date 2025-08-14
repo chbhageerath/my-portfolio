@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: azure;
+  opacity: 0.9;
 }
 
 .skills-title {
@@ -16,6 +20,7 @@
   border-left: 5px solid #0d6efd; /* Blue line on left */
   border-bottom: 2px solid #000101;
   opacity: 0.9;
+  color:#000101
 }
 
 .skills-desc {

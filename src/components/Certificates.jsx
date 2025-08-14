@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Certificates.css";
 import Dsa from "../assets/Dsa.png";
 import python from "../assets/python.png";
@@ -13,7 +13,26 @@ const certificateData = [
 ];
 
 function Certificates() {
+    const homeRef = useRef(null);
+    useEffect(() => {
+      if (window.VANTA) {
+        const effect = window.VANTA.NET({
+          el: homeRef.current,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+        });
+        return () => {
+          if (effect.destroy) effect.destroy();
+        };
+      }
+    }, []);
   return (
+    <body ref={homeRef}>
     <div className="certificates-container">
       <h2 className="certificates-title">Certificates</h2>
       <p className="certificates-subtext">
@@ -28,6 +47,7 @@ function Certificates() {
         ))}
       </div>
     </div>
+    </body>
   );
 }
 
