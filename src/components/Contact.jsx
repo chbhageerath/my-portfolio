@@ -43,7 +43,7 @@ function Contact() {
   };
 
   return (
-    <body ref={homeRef}>
+    <section ref={homeRef}>
     <div className="contact-page">
       <h2 className="contact-title">Contact Me</h2>
       <p className="contact-subtext">
@@ -113,7 +113,7 @@ function Contact() {
       </div>
       
     </div>
-    </body>
+    </section>
   );
 }
 
