@@ -6,7 +6,14 @@
   color: #333;
   background-color: #f9f9f9;
   border-radius: 10px;
-  opacity: 0.8;
+  opacity: 1;
+  
+}
+.contact-body{
+ 
+  margin: 0;
+  padding: 0;
+/* or match your Vanta background color */
 
 }
 
@@ -86,3 +93,23 @@
   width: 100%;
   height: 350px;
 }
+
+.contact-body {
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+}
+
+.contact-page {
+  flex: 1;
+  max-width: 900px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* keeps content centered inside */
+}
+
