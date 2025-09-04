@@ -43,7 +43,7 @@ function Contact() {
   };
 
   return (
-    <section ref={homeRef}>
+    <section ref={homeRef} className="contact-body">
     <div className="contact-page">
       <h2 className="contact-title">Contact Me</h2>
       <p className="contact-subtext">
@@ -100,7 +100,7 @@ function Contact() {
 
         <div className="map-container">
           <iframe
-            title="Mallareddy University Map"
+            title="Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51891.257465774426!2d77.87195877533227!3d17.61611605642285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbfe478e59faa9%3A0x81529cfaa787745c!2sSadashivpet%2C%20Telangana%20502291!5e1!3m2!1sen!2sin!4v1755086660648!5m2!1sen!2sin"
             width="100%"
             height="350"
@@ -111,7 +111,6 @@ function Contact() {
           ></iframe>
         </div>
       </div>
-      
     </div>
     </section>
   );
