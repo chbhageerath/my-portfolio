@@ -19,6 +19,7 @@ export default function Navbar() {
         <li><Link to="/certificates">Certificates</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
+      <div className="hamburger">☰</div>
     </nav>
   );
 }
