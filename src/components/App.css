@@ -1,8 +1,23 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
+
   font-family: Arial, sans-serif;
   opacity: 1;
+
 }
+
+.page-content {
+  padding-top: 60px; /* adjust based on your navbar height */
+}
+
 
 /* Navbar styles */
 .navbar {
@@ -53,7 +68,18 @@ body {
   transition-duration: 0.7s;
   transform-origin: left;
 }
-
+#span{ font-size: 20px;
+   opacity: 0.9;
+   cursor: pointer;
+   font-weight: bold;
+   padding: 5px 10px; 
+}
+h1{ font-size: 2.5rem;
+   opacity: 0.7; 
+}
+h2{ color:rgb(96, 226, 224);
+   font-weight: bold;
+ }
 /* Hamburger */
 .hamburger {
   font-size: 28px;
@@ -95,12 +121,14 @@ body {
 /* Home section */
 .home {
   margin: 0;
+  margin-top: 0;
+  padding-top: 0;
   position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 40px 40px;
+  padding: 0 40px;
   overflow: hidden;
   height: 100vh;
   color: #f1f5f9;
